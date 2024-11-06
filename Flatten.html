@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = [1, 2, [4, 8], [9, 3], [10, 14], 29];
+        let result = [];
+        function arrayflaten(arr) {
+            for (let element of arr)//The for...of loop iterates over each item in arr and assigns it to the variable element for each iteration.
+            {
+                if (Array.isArray(element)) {
+                    //Recursive call 
+                    arrayflaten(element); //If element is an array, we call arrayFlatten with element as the argument.This recursive call will further flatten any nested arrays within element
+                }
+                else {
+                    result.push(element)
+                }
+            }
+        }
+        arrayflaten(num);
+        document.write(result)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a function that takes an array of integers and returns the largest difference between any two numbers in the array
+        function largestdifference(arr){
+            if (arr.length < 2){
+                return 0;  // Return 0 if there are not enough elements to compare
+            }
+            // Find the minimum and maximum values in the array
+            let min = Math.min(...arr);
+            let max = Math.max(...arr);
+            
+            // Calculate the difference
+            return max - min ; 
+        }
+        const number = [3,10,6,2,15];
+        document.write(largestdifference(number));
+    </script>
+</body>
+</html>

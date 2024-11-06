@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inputString = "The quick brown fox jumps over the lazy dog";
+        function longest(str){
+            let words = str.split(' ');
+            let Longestword = '';
+
+            for(let word of words)//let word creates a temporary variable word that will hold each element of the words array as we iterate through it.
+            {
+                if(word.length > Longestword.length){
+                    Longestword = word;
+                }
+            }
+            return Longestword;
+        }
+        document.write(longest(inputString))
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array1 = [10, , 5, 3, 4, 9, 25]
+        function selectionsort(arr) {
+            let n = arr.length;
+            for (let i = 0; i < n - 1; i++) {
+                let min = i;
+                for (let j = i + 1; j < n; j++) {
+                    if (arr[j] < arr[min]) {
+                        min = j;
+                    }
+                }
+                if (min !== i) {
+                    let temp = arr[i];
+                    arr[i] = arr[min];
+                    arr[min] = temp;
+                }
+            }
+            return arr;
+        }
+        document.write(selectionsort(array1))
+    </script>
+</body>
+
+</html>

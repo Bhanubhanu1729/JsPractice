@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const array = ["Bhanu","Teja","Joanna"];
+        const obj = {}; //This creates an empty object obj where we will add key-value pairs as we go through each item in the array.
+
+        array.forEach((item)=>{
+            obj[item] = item.length;
+        });
+        document.write(JSON.stringify(obj)); // Convert the object to a JSON string for display
+    </script>
+</body>
+</html>

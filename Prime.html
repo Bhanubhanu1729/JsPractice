@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="inputString" placeholder="Enter a Number..."><br>
+        <br>
+       <button onclick="isPrime()">Prime or Not</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function isPrime(n){
+            const inputValue = document.getElementById("inputString").value
+            if(n<2)
+            return `${n} is not a Prime Number`
+        for(let i=2;i<n;i++){
+            if(n%i===0)
+            return`${n} is not a Prime number`
+        }
+        return`${n}is a Prime NUmber`
+        // document.getElementById("result").textContent=isPrime(n)
+        }
+        console.log(isPrime(97))
+        // function checkPrime() {
+        //     const inputValue = document.getElementById("inputString").value;
+        //     const number = parseInt(inputValue);
+        //     if (isNaN(number)) {
+        //         document.getElementById("result").textContent = "Please enter a valid number";
+        //         return;
+        //     }
+        //     document.getElementById("result").textContent = isPrime(number);
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array1 = [22,64,34,25,12,11,90]
+        function bubblesort(arr){
+            let n = arr.length;
+            //outer loop
+            for (let i=0; i<n-1;i++){
+                //inner loop
+                for(let j=0;j<n-i-1;j++){
+                    if(arr[j]>arr[j+1]){
+                        //swap arr[j] and arr[j+1]
+                        let temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        document.write(bubblesort(array1))
+    </script>
+</body>
+</html>
